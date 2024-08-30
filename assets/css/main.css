@@ -5,19 +5,16 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-
 /*--------------------------------------------------------------
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
-/* Fonts */
+/* ============================================================= tipo de fuente ============================================================= */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Amatic SC",  sans-serif;
   --nav-font: "Inter",  sans-serif;
-}
-
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+/* ============================================================ colores globales ============================================================ */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
@@ -26,8 +23,7 @@
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
-
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+/* ============================================================ colores Nav Menu ============================================================ */
 :root {
   --nav-color: #7f7f90;  /* The default color of the main navmenu links */
   --nav-hover-color: #ce1212; /* Applied to main navmenu links when they are hovered over or active */
@@ -36,14 +32,11 @@
   --nav-dropdown-color: #7f7f90; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #ce1212; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
-
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
-
 .light-background {
   --background-color: #f2f2f2;
   --surface-color: #ffffff;
 }
-
 .dark-background {
   --background-color: #1f1f24;
   --default-color: #ffffff;
@@ -51,15 +44,13 @@
   --surface-color: #37373f;
   --contrast-color: #ffffff;
 }
-
-/* Smooth scroll */
+/* ============================================================== smooth scroll ============================================================== */
 :root {
   scroll-behavior: smooth;
 }
-
-/*--------------------------------------------------------------
-# General Styling & Shared Classes
---------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------------------------------
+#                                                       General Styling & Shared Classes
+---------------------------------------------------------------------------------------------------------------------------------------------*/
 body {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -86,9 +77,7 @@ h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
 }
-
-/* Pulsating Play Button
-------------------------------*/
+/* ---------------------------------------------------------- Pulsating Play Button ----------------------------------------------------------*/
 .pulsating-play-btn {
   width: 94px;
   height: 94px;
@@ -165,12 +154,10 @@ h6 {
     opacity: 0;
   }
 }
-
-/* PHP Email Form Messages
-------------------------------*/
+/* -------------------------------------------------------- PHP Email Form Messages -------------------------------------------------------- */
 .php-email-form .error-message {
   display: none;
-  background: #df1529;
+  background: #ad0415;
   color: #ffffff;
   text-align: left;
   padding: 15px;
@@ -181,7 +168,7 @@ h6 {
 .php-email-form .sent-message {
   display: none;
   color: #ffffff;
-  background: #059652;
+  background: #1eaa02;
   text-align: center;
   padding: 15px;
   margin-bottom: 24px;
@@ -217,10 +204,9 @@ h6 {
     transform: rotate(360deg);
   }
 }
-
-/*--------------------------------------------------------------
-# Global Header
---------------------------------------------------------------*/
+/* -----------------------------------------------------------------------------------------------------------------------------------------
+#                                                               Global Header
+----------------------------------------------------------------------------------------------------------------------------------------- */
 .header {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -287,10 +273,9 @@ h6 {
 .scrolled .header {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
-
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
+/* --------------------------------------------------------------------------------------------------------------------------------------------
+#                                                                 Navigation Menu
+-------------------------------------------------------------------------------------------------------------------------------------------- */
 /* Desktop Navigation */
 @media (min-width: 1200px) {
   .navmenu {
@@ -422,8 +407,7 @@ h6 {
     visibility: visible;
   }
 }
-
-/* Mobile Navigation */
+/* ------------------------------------------------------------ Mobile Navigation ------------------------------------------------------------ */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
@@ -548,10 +532,9 @@ h6 {
     display: block;
   }
 }
-
-/*--------------------------------------------------------------
-# Global Footer
---------------------------------------------------------------*/
+/* --------------------------------------------------------------------------------------------------------------------------------------------
+#                                                                 Global Footer
+-------------------------------------------------------------------------------------------------------------------------------------------- */
 .footer {
   --heading-font: var(--default-font);
   color: var(--default-color);
@@ -794,7 +777,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Hero Section
+# Hero Section (IMAGEN DEL PÓSTER EN HOME)
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
@@ -1086,11 +1069,11 @@ section,
 /*--------------------------------------------------------------
 # Menu Section
 --------------------------------------------------------------*/
-.menu .nav-tabs {
+.persoanjes .nav-tabs {
   border: 0;
 }
 
-.menu .nav-link {
+.personajes .nav-link {
   background-color: var(--background-color);
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin: 0 15px;
@@ -1104,18 +1087,18 @@ section,
 }
 
 @media (max-width: 575px) {
-  .menu .nav-link {
+  .personajes .nav-link {
     margin: 0 10px;
     padding: 10px 0;
   }
 }
 
-.menu .nav-link i {
+.personajes .nav-link i {
   padding-right: 15px;
   font-size: 48px;
 }
 
-.menu .nav-link h4 {
+.personajes .nav-link h4 {
   font-size: 18px;
   font-weight: 400;
   margin: 0;
@@ -1123,67 +1106,66 @@ section,
 }
 
 @media (max-width: 575px) {
-  .menu .nav-link h4 {
+  .personajes .nav-link h4 {
     font-size: 16px;
   }
 }
 
-.menu .nav-link:hover {
+.personajes .nav-link:hover {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
 
-.menu .nav-link.active {
+.personajes .nav-link.active {
   background-color: var(--background-color);
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
 
-.menu .tab-content .tab-header {
+.personajes .tab-content .tab-header {
   padding: 30px 0;
 }
 
-.menu .tab-content .tab-header p {
+.personajes .tab-content .tab-header p {
   font-size: 14px;
   text-transform: uppercase;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin-bottom: 0;
 }
 
-.menu .tab-content .tab-header h3 {
+.personajes .tab-content .tab-header h3 {
   font-size: 48px;
   font-weight: 700;
   color: var(--accent-color);
 }
 
-.menu .tab-content .menu-item {
+.personajes .tab-content .personajes-item {
   text-align-last: center;
 }
 
-.menu .tab-content .menu-item .menu-img {
+.personajes .tab-content .personajes-item .menu-img {
   padding: 0 60px;
   margin-bottom: 15px;
 }
 
-.menu .tab-content .menu-item h4 {
+.persoanjes .tab-content .personajes-item h4 {
   font-size: 24px;
   font-weight: 400;
   margin-bottom: 5px;
   font-family: var(--default-font);
 }
 
-.menu .tab-content .menu-item .ingredients {
+.persoanjes .tab-content .personajes-item .ingredients {
   font-family: var(--nav-font);
   color: color-mix(in srgb, var(--default-color), transparent 50%);
   margin-bottom: 5px;
 }
 
-.menu .tab-content .menu-item .price {
+.personajes .tab-content .perosnajes-item .price {
   font-size: 24px;
   font-weight: 700;
   color: var(--accent-color);
 }
-
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
@@ -1264,81 +1246,10 @@ section,
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--accent-color);
 }
-
-/*--------------------------------------------------------------
-# Events Section
---------------------------------------------------------------*/
-.events .container-fluid {
-  padding: 0;
-}
-
-.events .event-item {
-  background-size: cover;
-  background-position: cente;
-  min-height: 600px;
-  padding: 30px;
-}
-
-@media (max-width: 575px) {
-  .events .event-item {
-    min-height: 500px;
-  }
-}
-
-.events .event-item:before {
-  content: "";
-  background: rgba(0, 0, 0, 0.6);
-  position: absolute;
-  inset: 0;
-}
-
-.events .event-item h3 {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 5px;
-  color: #ffffff;
-  position: relative;
-}
-
-.events .event-item .price {
-  color: #ffffff;
-  border-bottom: 2px solid var(--accent-color);
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 15px;
-  position: relative;
-}
-
-.events .event-item .description {
-  margin-bottom: 0;
-  color: rgba(255, 255, 255, 0.8);
-  position: relative;
-}
-
-.events .swiper-wrapper {
-  height: auto;
-}
-
-.events .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.events .swiper-pagination .swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
-  opacity: 1;
-}
-
-.events .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--accent-color);
-}
-
 /*--------------------------------------------------------------
 # Chefs Section
 --------------------------------------------------------------*/
-.chefs .team-member {
+.figuras .team-member {
   background-color: var(--surface-color);
   box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -1347,12 +1258,12 @@ section,
   transition: 0.3s;
 }
 
-.chefs .team-member .member-img {
+.figuras .team-member .member-img {
   position: relative;
   overflow: hidden;
 }
 
-.chefs .team-member .member-img:after {
+.figuras .team-member .member-img:after {
   position: absolute;
   content: "";
   left: -1px;
@@ -1367,7 +1278,7 @@ section,
   z-index: 1;
 }
 
-.chefs .team-member .social {
+.figuras .team-member .social {
   position: absolute;
   right: -100%;
   top: 30px;
@@ -1378,7 +1289,7 @@ section,
   z-index: 2;
 }
 
-.chefs .team-member .social a {
+.figuras .team-member .social a {
   transition: color 0.3s;
   color: color-mix(in srgb, var(--default-color), transparent 50%);
   margin: 15px 12px;
@@ -1387,33 +1298,33 @@ section,
   text-align: center;
 }
 
-.chefs .team-member .social a:hover {
+.figuras .team-member .social a:hover {
   color: var(--default-color);
 }
 
-.chefs .team-member .social i {
+.figuras .team-member .social i {
   font-size: 18px;
 }
 
-.chefs .team-member .member-info {
+.figuras .team-member .member-info {
   padding: 10px 15px 20px 15px;
 }
 
-.chefs .team-member .member-info h4 {
+.figuras .team-member .member-info h4 {
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 20px;
   font-family: var(--default-font);
 }
 
-.chefs .team-member .member-info span {
+.figuras .team-member .member-info span {
   display: block;
   font-size: 14px;
   font-weight: 400;
   color: color-mix(in srgb, var(--default-color), transparent 50%);
 }
 
-.chefs .team-member .member-info p {
+.figuras .team-member .member-info p {
   font-style: italic;
   font-size: 14px;
   padding-top: 15px;
@@ -1421,16 +1332,15 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
-.chefs .team-member:hover {
+.figuras .team-member:hover {
   transform: scale(1.08);
   box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
 }
 
-.chefs .team-member:hover .social {
+.figuras .team-member:hover .social {
   right: 8px;
   opacity: 1;
 }
-
 /*--------------------------------------------------------------
 # Book A Table Section
 --------------------------------------------------------------*/
@@ -1499,24 +1409,23 @@ section,
 .book-a-table .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
-
 /*--------------------------------------------------------------
 # Gallery Section
 --------------------------------------------------------------*/
-.gallery {
+.galeria {
   overflow: hidden;
 }
 
-.gallery .swiper-wrapper {
+.galeria .swiper-wrapper {
   height: auto;
 }
 
-.gallery .swiper-pagination {
+.galeria .swiper-pagination {
   margin-top: 20px;
   position: relative;
 }
 
-.gallery .swiper-pagination .swiper-pagination-bullet {
+.galeria .swiper-pagination .swiper-pagination-bullet {
   background-color: color-mix(in srgb, var(--default-color), transparent 85%);
   border: 0;
   width: 12px;
@@ -1524,21 +1433,21 @@ section,
   opacity: 1;
 }
 
-.gallery .swiper-pagination .swiper-pagination-bullet-active {
+.galeria .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--accent-color);
   opacity: 1;
 }
 
-.gallery .swiper-slide-active {
+.galeria .swiper-slide-active {
   text-align: center;
 }
 
 @media (min-width: 992px) {
-  .gallery .swiper-wrapper {
+  .galeria .swiper-wrapper {
     padding: 40px 0;
   }
 
-  .gallery .swiper-slide-active {
+  .galeria .swiper-slide-active {
     background: var(--background-color);
     border: 6px solid var(--accent-color);
     padding: 4px;
@@ -1547,7 +1456,6 @@ section,
     transition: none;
   }
 }
-
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
