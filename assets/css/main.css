@@ -5,16 +5,19 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+
 /*--------------------------------------------------------------
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
-/* ============================================================= tipo de fuente ============================================================= */
+/* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Amatic SC",  sans-serif;
   --nav-font: "Inter",  sans-serif;
-/* ============================================================ colores globales ============================================================ */
+}
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
@@ -23,7 +26,8 @@
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
-/* ============================================================ colores Nav Menu ============================================================ */
+
+/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #7f7f90;  /* The default color of the main navmenu links */
   --nav-hover-color: #ce1212; /* Applied to main navmenu links when they are hovered over or active */
@@ -32,11 +36,14 @@
   --nav-dropdown-color: #7f7f90; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #ce1212; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
+
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+
 .light-background {
   --background-color: #f2f2f2;
   --surface-color: #ffffff;
 }
+
 .dark-background {
   --background-color: #1f1f24;
   --default-color: #ffffff;
@@ -44,13 +51,15 @@
   --surface-color: #37373f;
   --contrast-color: #ffffff;
 }
-/* ============================================================== smooth scroll ============================================================== */
+
+/* Smooth scroll */
 :root {
   scroll-behavior: smooth;
 }
-/*---------------------------------------------------------------------------------------------------------------------------------------------
-#                                                       General Styling & Shared Classes
----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# General Styling & Shared Classes
+--------------------------------------------------------------*/
 body {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -77,7 +86,9 @@ h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
 }
-/* ---------------------------------------------------------- Pulsating Play Button ----------------------------------------------------------*/
+
+/* Pulsating Play Button
+------------------------------*/
 .pulsating-play-btn {
   width: 94px;
   height: 94px;
@@ -154,10 +165,12 @@ h6 {
     opacity: 0;
   }
 }
-/* -------------------------------------------------------- PHP Email Form Messages -------------------------------------------------------- */
+
+/* PHP Email Form Messages
+------------------------------*/
 .php-email-form .error-message {
   display: none;
-  background: #ad0415;
+  background: #df1529;
   color: #ffffff;
   text-align: left;
   padding: 15px;
@@ -168,7 +181,7 @@ h6 {
 .php-email-form .sent-message {
   display: none;
   color: #ffffff;
-  background: #1eaa02;
+  background: #059652;
   text-align: center;
   padding: 15px;
   margin-bottom: 24px;
@@ -204,9 +217,10 @@ h6 {
     transform: rotate(360deg);
   }
 }
-/* -----------------------------------------------------------------------------------------------------------------------------------------
-#                                                               Global Header
------------------------------------------------------------------------------------------------------------------------------------------ */
+
+/*--------------------------------------------------------------
+# Global Header
+--------------------------------------------------------------*/
 .header {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -273,9 +287,9 @@ h6 {
 .scrolled .header {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
-/* --------------------------------------------------------------------------------------------------------------------------------------------
-#                                                                 Navigation Menu
--------------------------------------------------------------------------------------------------------------------------------------------- */
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
 /* Desktop Navigation */
 @media (min-width: 1200px) {
   .navmenu {
@@ -407,7 +421,8 @@ h6 {
     visibility: visible;
   }
 }
-/* ------------------------------------------------------------ Mobile Navigation ------------------------------------------------------------ */
+
+/* Mobile Navigation */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
@@ -1246,101 +1261,39 @@ section,
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--accent-color);
 }
-/*--------------------------------------------------------------
-# Chefs Section
---------------------------------------------------------------*/
-.figuras .team-member {
-  background-color: var(--surface-color);
-  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  text-align: center;
-  border-radius: 5px;
-  transition: 0.3s;
+/* Asegúrate de que el contenedor de las columnas esté usando flexbox */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* Espacio entre los elementos */
 }
 
-.figuras .team-member .member-img {
-  position: relative;
-  overflow: hidden;
+/* Asegúrate de que cada columna ocupe el ancho adecuado y sea flexible */
+.col-lg-4 {
+  flex: 1 1 calc(33.333% - 1rem); /* Tres columnas por fila con un espacio entre ellas */
+  box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho */
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en una columna */
 }
 
-.figuras .team-member .member-img:after {
-  position: absolute;
-  content: "";
-  left: -1px;
-  right: -1px;
-  bottom: -1px;
-  height: 100%;
-  background-color: var(--surface-color);
-  -webkit-mask: url("../img/team-shape.svg") no-repeat center bottom;
-  mask: url("../img/team-shape.svg") no-repeat center bottom;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  z-index: 1;
+/* Asegúrate de que la imagen y el texto estén alineados */
+.team-member {
+  display: flex;
+  flex-direction: column; /* Coloca la imagen y el texto en una columna */
+  text-align: center; /* Centra el texto debajo de la imagen */
 }
 
-.figuras .team-member .social {
-  position: absolute;
-  right: -100%;
-  top: 30px;
-  opacity: 0;
-  border-radius: 4px;
-  transition: 0.5s;
-  background: color-mix(in srgb, var(--background-color), transparent 60%);
-  z-index: 2;
+/* Ajuste de imagen */
+.member-img img {
+  max-width: 100%; /* Asegúrate de que la imagen no se salga del contenedor */
+  height: auto; /* Mantiene la relación de aspecto de la imagen */
 }
 
-.figuras .team-member .social a {
-  transition: color 0.3s;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-  margin: 15px 12px;
-  display: block;
-  line-height: 0;
-  text-align: center;
+/* Opcional: estilo para el texto debajo de la imagen */
+.member-info {
+  padding: 1rem; /* Espacio alrededor del texto */
 }
 
-.figuras .team-member .social a:hover {
-  color: var(--default-color);
-}
-
-.figuras .team-member .social i {
-  font-size: 18px;
-}
-
-.figuras .team-member .member-info {
-  padding: 10px 15px 20px 15px;
-}
-
-.figuras .team-member .member-info h4 {
-  font-weight: 700;
-  margin-bottom: 5px;
-  font-size: 20px;
-  font-family: var(--default-font);
-}
-
-.figuras .team-member .member-info span {
-  display: block;
-  font-size: 14px;
-  font-weight: 400;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-}
-
-.figuras .team-member .member-info p {
-  font-style: italic;
-  font-size: 14px;
-  padding-top: 15px;
-  line-height: 26px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-}
-
-.figuras .team-member:hover {
-  transform: scale(1.08);
-  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
-}
-
-.figuras .team-member:hover .social {
-  right: 8px;
-  opacity: 1;
-}
 /*--------------------------------------------------------------
 # Book A Table Section
 --------------------------------------------------------------*/
