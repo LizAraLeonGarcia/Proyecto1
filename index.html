@@ -1245,32 +1245,36 @@
         <p><span>Reserva tus fascículos</span> <span class="description-title">con nosotros<br></span></p>
       </div><!-- End Section Title -->
       <div class="container">
-        <div class="row g-0">
-          <div class="col-lg-4 reservation-img" style="background-image: url(assets/img/reservation.jpg);"></div>
-          <div class="col-lg-8 d-flex align-items-center reservation-form-bg">
+        <div class="row g-0 d-flex align-items-center">
+          <!-- Imagen -->
+          <div class="col-lg-7 col-md-12 mb-4 mb-md-0">
+            <img src="assets/img/reservar.jpg" class="img-fluid" alt="Imagen de reserva">
+          </div>
+          <!-- Formulario -->
+          <div class="col-lg-5 col-md-12 reservation-form-bg">
             <form role="form">
               <div class="row gy-4">
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-12 col-md-12">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" readonly>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-12 col-md-12">
                   <input type="email" class="form-control" name="email" id="email" placeholder="Correo electrónico" readonly>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-12 col-md-12">
                   <input type="text" class="form-control" name="phone" id="phone" placeholder="Celular" readonly>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                  <input type="text" class="form-control" name="direccion" id="date" placeholder="Direccion" readonly>
+                <div class="col-lg-12 col-md-12">
+                  <input type="text" class="form-control" name="direccion" id="direccion" placeholder="Dirección" readonly>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                  <input type="text" class="form-control" name="fasciculo" id="fasciculo" placeholder="Fasciculo" readonly>
+                <div class="col-lg-12 col-md-12">
+                  <input type="text" class="form-control" name="fasciculo" id="fasciculo" placeholder="Fascículo" readonly>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-12 col-md-12">
                   <input type="number" class="form-control" name="people" id="people" placeholder="# de fascículos" readonly>
                 </div>
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Notas adicionales, si es para regalo, se necesita factura, etc." readonly></textarea>
+                <textarea class="form-control" name="message" rows="5" placeholder="Notas adicionales" readonly></textarea>
               </div>
               <div class="text-center mt-3">
                 <div class="sent-message" style="display: block;">Nota: Este es un formulario estático. No se puede enviar.</div>
@@ -1280,7 +1284,7 @@
           </div><!-- End Reservation Form -->
         </div>
       </div>
-    </section><!-- /Book A Table Section -->        
+    </section><!-- /Book A Table Section -->               
     <!-- ========================================================= Gallery Section ========================================================= -->
     <section id="galeria" class="galeria section light-background">
       <!-- Section Title -->

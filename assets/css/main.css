@@ -9,14 +9,14 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #37373f; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #ce1212; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #230baf; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #7f7f90;  /* The default color of the main navmenu links */
-  --nav-hover-color: #ce1212; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #0400ff; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
 }
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -24,6 +24,7 @@
   --background-color: #f2f2f2;
   --surface-color: #ffffff;
 }
+
 .dark-background {
   --background-color: #1f1f24;
   --default-color: #ffffff;
@@ -35,9 +36,7 @@
 :root {
   scroll-behavior: smooth;
 }
-/*--------------------------------------------------------------
-# General Styling & Shared Classes
---------------------------------------------------------------*/
+/*----------------------------------------------------- General Styling & Shared Classes -----------------------------------------------------*/
 body {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -51,7 +50,7 @@ a {
 }
 
 a:hover {
-  color: rgba(43, 255, 0, 0.747);  
+  color: rgb(0, 0, 0);  
   text-decoration: none;
 }
 
@@ -90,7 +89,7 @@ h6 {
   border: 5px solid color-mix(in srgb, var(--accent-color), transparent 30%);
   top: -15%;
   left: -15%;
-  background: rgba(198, 16, 0, 0);
+  background: rgb(1, 131, 18);
 }
 
 .pulsating-play-btn:after {
@@ -281,7 +280,7 @@ h6 {
   .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: rgba(255, 0, 0, 0.5);  
+    color: rgb(4, 18, 139);  
 }
 /* Mobile Navigation */
 @media (max-width: 1199px) {
@@ -389,9 +388,7 @@ h6 {
     display: block;
   }
 }
-/* --------------------------------------------------------------------------------------------------------------------------------------------
-#                                                                 Global Footer
--------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------ Global Footer --------------------------------------------------------------- */
 .footer {
   --heading-font: var(--default-font);
   color: var(--default-color);
@@ -427,7 +424,7 @@ h6 {
   border-radius: 50%;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
   font-size: 16px;
-  color: rgba(255, 0, 0, 0.5);  
+  color: rgba(0, 47, 255, 0.5);  
   margin-right: 10px;
   transition: 0.3s;
 }
@@ -450,8 +447,7 @@ h6 {
   margin-top: 5px;
   font-size: 13px;
 }
-
-/*-------------------------------------------------------------- Preloader --------------------------------------------------------------*/
+/*---------------------------------------------------------------- Preloader ----------------------------------------------------------------*/
 #preloader {
   position: fixed;
   inset: 0;
@@ -493,8 +489,7 @@ h6 {
     opacity: 0;
   }
 }
-
-/*-------------------------------------------------------------- Scroll Top Button --------------------------------------------------------------*/
+/*------------------------------------------------------------ Scroll Top Button ------------------------------------------------------------*/
 .scroll-top {
   position: fixed;
   visibility: hidden;
@@ -525,19 +520,13 @@ h6 {
   opacity: 1;
   bottom: 15px;
 }
-
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
+/*--------------------------------------------- Disable aos animation delay on mobile devices -----------------------------------------------*/
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
 }
-
-/*--------------------------------------------------------------
-# Global Page Titles & Breadcrumbs
---------------------------------------------------------------*/
+/*---------------------------------------------------- Global Page Titles & Breadcrumbs ------------------------------------------------------*/
 .page-title {
   --background-color: color-mix(in srgb, var(--default-color), transparent 96%);
   color: var(--default-color);
@@ -573,11 +562,8 @@ h6 {
   content: "/";
   display: inline-block;
   padding-right: 10px;
-  color: rgba(255, 0, 0, 0.5);}
-
-/*--------------------------------------------------------------
-# Global Sections
---------------------------------------------------------------*/
+  color: rgb(7, 39, 146);}
+/*------------------------------------------------------------ Global Sections --------------------------------------------------------------*/
 section,
 .section {
   color: var(--default-color);
@@ -594,10 +580,7 @@ section,
     scroll-margin-top: 56px;
   }
 }
-
-/*--------------------------------------------------------------
-# Global Section Titles
---------------------------------------------------------------*/
+/*--------------------------------------------------------- Global Section Titles -----------------------------------------------------------*/
 .section-title {
   text-align: center;
   padding-bottom: 60px;
@@ -610,7 +593,7 @@ section,
   font-weight: 400;
   padding: 0;
   margin: 0;
-  color: rgba(255, 0, 0, 0.5);  
+  color: rgba(19, 7, 121, 0.897);  
   display: inline-block;
   text-transform: uppercase;
   font-family: var(--default-font);
@@ -627,7 +610,6 @@ section,
 .section-title p .description-title {
   color: var(--accent-color);
 }
-
 /*-------------------------------------------------------------- Hero (HOME) --------------------------------------------------------------*/
 .hero {
   width: 100%;
@@ -645,7 +627,7 @@ section,
 }
 
 .hero p {
-  color: rgba(255, 0, 0, 0.5);  
+  color: rgba(0, 0, 0, 0.5);  
   margin: 5px 0 30px 0;
   font-size: 20px;
   font-weight: 400;
@@ -661,13 +643,13 @@ section,
   padding: 10px 28px 12px 28px;
   border-radius: 50px;
   transition: 0.5s;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 28px rgb(1, 202, 51);
 }
 
 .hero .btn-get-started:hover {
   color: var(--contrast-color);
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 28px rgb(4, 158, 50);
 }
 
 .hero .btn-watch-video {
@@ -691,7 +673,7 @@ section,
 }
 
 .hero .btn-watch-video:hover i {
-  color: rgba(255, 0, 0, 0.5);
+  color: rgb(17, 167, 204);
 }
 
 .hero .animated {
@@ -762,7 +744,7 @@ section,
 }
 
 .about .fst-italic {
-  color: rgba(255, 0, 0, 0.5);
+  color: rgb(0, 0, 0);
 }
 
 .about .content ul {
@@ -792,9 +774,7 @@ section,
   left: calc(50% - 47px);
   top: calc(50% - 47px);
 }
-/*--------------------------------------------------------------
-# Why Us Section
---------------------------------------------------------------*/
+/*------------------------------------------------------------- Why Us Section ---------------------------------------------------------------*/
 .why-us .why-box {
   color: var(--contrast-color);
   background: var(--accent-color);
@@ -870,10 +850,7 @@ section,
   color: var(--contrast-color);
   background: var(--accent-color);
 }
-
-/*--------------------------------------------------------------
-# Stats Section
---------------------------------------------------------------*/
+/*------------------------------------------------------------- Stats Section ---------------------------------------------------------------*/
 .stats {
   position: relative;
   padding: 120px 0;
@@ -921,17 +898,14 @@ section,
   font-weight: 700;
   color: rgba(255, 0, 0, 0.5);
 }
-
-/*--------------------------------------------------------------
-# Menu Section
---------------------------------------------------------------*/
+/*-------------------------------------------------------------- Menu Section ----------------------------------------------------------------*/
 .menu .nav-tabs {
   border: 0;
 }
 
 .menu .nav-link {
   background-color: var(--background-color);
-  color: rgba(255, 0, 0, 0.5);  
+  color: rgb(5, 192, 36);  
   margin: 0 15px;
   padding: 10px 5px;
   transition: 0.3s;
@@ -985,7 +959,7 @@ section,
 .personajes .tab-content .tab-header p {
   font-size: 14px;
   text-transform: uppercase;
-  color: rgba(255, 0, 0, 0.5);
+  color: rgb(3, 45, 138);
   margin-bottom: 0;
 }
 
@@ -1013,7 +987,7 @@ section,
 
 .personajes .tab-content .personajes-item .ingredients {
   font-family: var(--nav-font);
-  color: rgba(255, 0, 0, 0.5);
+  color: rgba(0, 110, 255, 0.5);
   margin-bottom: 5px;
 }
 
@@ -1051,10 +1025,7 @@ section,
     flex: 1 1 100%; /* 1 elemento por fila */
   }
 }
-
-/*--------------------------------------------------------------
-# Testimonials Section
---------------------------------------------------------------*/
+/*---------------------------------------------------------- Testimonials Section ------------------------------------------------------------*/
 .testimonials .testimonials-carousel,
 .testimonials .testimonials-slider {
   overflow: hidden;
@@ -1079,7 +1050,7 @@ section,
 
 .testimonials .testimonial-item h4 {
   font-size: 14px;
-  color: rgba(255, 0, 0, 0.5);  
+  color: rgb(15, 138, 4);  
   margin: 0 0 10px 0;
 }
 
@@ -1090,7 +1061,7 @@ section,
 
 .testimonials .testimonial-item .quote-icon-left,
 .testimonials .testimonial-item .quote-icon-right {
-  color: rgba(255, 0, 0, 0.5);
+  color: rgba(9, 30, 224, 0.5);
   font-size: 26px;
   line-height: 0;
 }
@@ -1165,12 +1136,10 @@ section,
   grid-template-columns: repeat(4, 1fr); /* Cuatro columnas por fila */
   gap: 1rem; /* Espacio entre columnas */
 }
-
 /* Ajustes para los elementos */
 .team-member {
   box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho */
 }
-
 /* Ajustes para las imágenes y el texto */
 .team-member .member-img img {
   width: 100%; /* Ajusta el tamaño de la imagen */
@@ -1180,21 +1149,106 @@ section,
 .team-member .member-info {
   text-align: center; /* Centra el texto */
 }
-/*--------------------------------------------------------------
-# Book A Table Section
---------------------------------------------------------------*/
-.book-a-table .reservation-img {
-  min-height: 500px;
-  background-size: cover;
-  background-position: center;
+/*---------------------------------------------------------- Book A Table Section ------------------------------------------------------------*/
+/* Estilos generales para la sección */
+.book-a-table.section {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+}
+/* Título de la sección */
+.book-a-table .section-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-.book-a-table .reservation-form-bg {
-  background: color-mix(in srgb, var(--default-color), transparent 97%);
+.book-a-table .section-title p {
+  font-size: 18px;
+  color: #666;
+  text-align: center;
 }
-/*--------------------------------------------------------------
-# Gallery Section
---------------------------------------------------------------*/
+/* Estilo para el título "Reserva tus fascículos" */
+.book-a-table .section-title span {
+  font-size: 24px; /* Tamaño de fuente mayor para "Reserva tus fascículos" */
+  font-weight: 700; /* Opcional: negrita para resaltar el texto */
+  color: #333; /* Cambia el color si es necesario */
+}
+/* Estilo para el texto "con nosotros" */
+.book-a-table .description-title {
+  font-size: 30px; /* Tamaño de fuente mayor para "con nosotros" */
+  font-weight: 700; /* Opcional: negrita para resaltar el texto */
+  color: #043683; /* Cambia el color si es necesario */
+}
+/* Estilo para el contenedor del formulario */
+.reservation-form-bg {
+  background-color: #ffffff;
+  padding: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+/* Estilo para los campos del formulario */
+.book-a-table .form-control {
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 14px;
+  width: 100%; /* Asegura que los campos usen todo el ancho disponible */
+  color: #333;
+}
+/* Estilo para el textarea */
+.book-a-table .form-control[name="message"] {
+  resize: none; /* Desactivar el cambio de tamaño del textarea */
+  width: 100%; /* Asegura que los campos usen todo el ancho disponible */
+}
+/* Estilo para el botón de reservar */
+.book-a-table button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.book-a-table button:hover {
+  background-color: #0056b3;
+}
+/* Estilo para el mensaje estático */
+.book-a-table .sent-message {
+  color: #bd0f0f;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+/* Alineación de imagen y formulario */
+.book-a-table .row {
+  display: flex;
+  flex-wrap: wrap; /* Asegura que los elementos se envuelvan en pantallas más pequeñas */
+  gap: 20px;
+}
+
+.book-a-table .col-lg-7, .book-a-table .col-lg-5 {
+  padding: 15px;
+  flex: 1;
+}
+/* Responsividad */
+@media (max-width: 991px) {
+  .book-a-table .col-lg-7, .book-a-table .col-lg-5 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .book-a-table .col-lg-7 img {
+    max-height: 300px; /* Ajusta la altura máxima de la imagen en pantallas más pequeñas */
+  }
+}
+/*------------------------------------------------------------ Gallery Section --------------------------------------------------------------*/
 .galeria {
   overflow: hidden;
 }
@@ -1239,9 +1293,7 @@ section,
     transition: none;
   }
 }
-/*--------------------------------------------------------------
-# Contact Section
---------------------------------------------------------------*/
+/*------------------------------------------------------------ Contact Section --------------------------------------------------------------*/
 .contact .info-item {
   background-color: var(--surface-color);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
@@ -1267,7 +1319,7 @@ section,
   font-weight: 700;
   margin: 0 0 5px 0;
   font-family: var(--default-font);
-  color: rgba(255, 0, 0, 0.5);
+  color: rgba(0, 47, 255, 0.5);
 }
 
 .contact .info-item p {
@@ -1282,15 +1334,13 @@ section,
   line-height: 1;
   margin: 4px 6px 0 0;
   transition: 0.3s;
-  color: rgba(255, 0, 0, 0.5);
+  color: rgba(7, 11, 230, 0.5);
 }
 
 .contact .info-item .social-links a:hover {
   color: var(--accent-color);
 }
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
+/*-------------------------------------------------------- Starter Section Section ----------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
 }
