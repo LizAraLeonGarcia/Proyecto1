@@ -1237,52 +1237,50 @@
         </div>
       </div>
     </section><!-- /figuras Section -->
-    <!-- ======================================================= Book A Table Section ======================================================= -->
+    <!-- ======================================================= reservar fasciculo ======================================================= -->
     <section id="book-a-table" class="book-a-table section">
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title">
         <h2>Reservar fascículo</h2>
         <p><span>Reserva tus fascículos</span> <span class="description-title">con nosotros<br></span></p>
       </div><!-- End Section Title -->
       <div class="container">
-        <div class="row g-0" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-0">
           <div class="col-lg-4 reservation-img" style="background-image: url(assets/img/reservation.jpg);"></div>
-          <div class="col-lg-8 d-flex align-items-center reservation-form-bg" data-aos="fade-up" data-aos-delay="200">
-            <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form">
+          <div class="col-lg-8 d-flex align-items-center reservation-form-bg">
+            <form role="form">
               <div class="row gy-4">
                 <div class="col-lg-4 col-md-6">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" required="">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" readonly>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Correo electrónico" required="">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Correo electrónico" readonly>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <input type="text" class="form-control" name="phone" id="phone" placeholder="Celular" required="">
+                  <input type="text" class="form-control" name="phone" id="phone" placeholder="Celular" readonly>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <input type="text" class="form-control" name="direccion" id="date" placeholder="Direccion" required=""> <!-- date-->
+                  <input type="text" class="form-control" name="direccion" id="date" placeholder="Direccion" readonly>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <input type="text" class="form-control" name="fasciculo" id="fasciculo" placeholder="Fasciculo" required=""> <!--time-->
+                  <input type="text" class="form-control" name="fasciculo" id="fasciculo" placeholder="Fasciculo" readonly>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <input type="number" class="form-control" name="people" id="people" placeholder="# de fascículos" required="">
+                  <input type="number" class="form-control" name="people" id="people" placeholder="# de fascículos" readonly>
                 </div>
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Notas adicionales, si es para regalo, se necesita factura, etc."></textarea>
+                <textarea class="form-control" name="message" rows="5" placeholder="Notas adicionales, si es para regalo, se necesita factura, etc." readonly></textarea>
               </div>
               <div class="text-center mt-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Su solicitud para el fascículo ha sido enviada. Nosotros lo llamaremos o le enviaremos un correo electrónico para confirmar su reservación. ¡Muchas gracias por escogernos!</div>
-                <button type="submit">Reservar fascículo</button>
+                <div class="sent-message" style="display: block;">Nota: Este es un formulario estático. No se puede enviar.</div>
+                <button type="button" onclick="alert('Este es un formulario estático. No se puede enviar.')">Reservar fascículo</button>
               </div>
             </form>
           </div><!-- End Reservation Form -->
         </div>
       </div>
-    </section><!-- /Book A Table Section -->
+    </section><!-- /Book A Table Section -->        
     <!-- ========================================================= Gallery Section ========================================================= -->
     <section id="galeria" class="galeria section light-background">
       <!-- Section Title -->
@@ -1429,28 +1427,28 @@
             </div>
           </div><!-- End Info Item -->
         </div>
-        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="600">
+        <form class="php-email-form" data-aos="fade-up" data-aos-delay="600">
           <div class="row gy-4">
             <div class="col-md-6">
-              <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+              <input type="text" name="name" class="form-control" placeholder="Your Name" readonly>
             </div>
-            <div class="col-md-6 ">
-              <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-            </div>
-            <div class="col-md-12">
-              <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+            <div class="col-md-6">
+              <input type="email" class="form-control" name="email" placeholder="Your Email" readonly>
             </div>
             <div class="col-md-12">
-              <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+              <input type="text" class="form-control" name="subject" placeholder="Subject" readonly>
+            </div>
+            <div class="col-md-12">
+              <textarea class="form-control" name="message" rows="6" placeholder="Message" readonly></textarea>
             </div>
             <div class="col-md-12 text-center">
-              <div class="loading">Cargando</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Su mensaje ha sido enviado. ¡Muchas gracias!</div>
-              <button type="submit">Enviar mensaje</button>
+              <div class="loading" style="display: none;">Cargando</div>
+              <div class="error-message" style="display: none;"></div>
+              <div class="sent-message" style="display: block;">Nota: Es un formulario estático. No se puede enviar el mensaje.</div>
+              <button type="button" onclick="alert('Este formulario es estático y no puede enviarse.')">Enviar</button>
             </div>
           </div>
-        </form><!-- End Contact Form -->
+        </form><!-- End Contact Form -->        
       </div>
     </section><!-- /Contact Section -->
 
@@ -1501,10 +1499,6 @@
     <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span> <strong class="px-1 sitename">Planeta DeAgostini México</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
