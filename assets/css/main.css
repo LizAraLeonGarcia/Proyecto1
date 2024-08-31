@@ -1194,13 +1194,11 @@ section,
   border: 1px solid #ddd;
   padding: 10px;
   font-size: 14px;
-  width: 100%; /* Asegura que los campos usen todo el ancho disponible */
   color: #333;
 }
 /* Estilo para el textarea */
 .book-a-table .form-control[name="message"] {
   resize: none; /* Desactivar el cambio de tamaño del textarea */
-  width: 100%; /* Asegura que los campos usen todo el ancho disponible */
 }
 /* Estilo para el botón de reservar */
 .book-a-table button {
