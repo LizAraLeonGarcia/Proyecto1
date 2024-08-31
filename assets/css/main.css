@@ -51,7 +51,7 @@ a {
 }
 
 a:hover {
-  color: rgba(255, 0, 0, 0.5);  
+  color: rgba(43, 255, 0, 0.747);  
   text-decoration: none;
 }
 
@@ -732,6 +732,16 @@ section,
   margin-bottom: 20px;
 }
 
+.about .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.about .col-lg-7, .about .col-lg-5 {
+  flex: 1;
+}
+
 .about .book-a-table {
   text-align: center;
   border: 4px solid color-mix(in srgb, var(--default-color), transparent 30%);
@@ -1130,7 +1140,7 @@ section,
 }
 
 /* Asegúrate de que cada columna ocupe el ancho adecuado y sea flexible */
-.col-lg-4 {
+.col-lg-3 {
   flex: 1 1 calc(25% - 1rem); /* Tres columnas por fila con un espacio entre ellas */
   box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho */
   display: flex;
