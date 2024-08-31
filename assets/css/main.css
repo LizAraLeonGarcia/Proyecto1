@@ -51,7 +51,7 @@ a {
 }
 
 a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  color: rgba(255, 0, 0, 0.5);  
   text-decoration: none;
 }
 
@@ -281,8 +281,8 @@ h6 {
   .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: color-mix(in srgb, var(--nav-color) 80%, black 50%);
-  }
+    color: rgba(255, 0, 0, 0.5);  
+}
 /* Mobile Navigation */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
@@ -427,7 +427,7 @@ h6 {
   border-radius: 50%;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
   font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: rgba(255, 0, 0, 0.5);  
   margin-right: 10px;
   transition: 0.3s;
 }
@@ -573,8 +573,7 @@ h6 {
   content: "/";
   display: inline-block;
   padding-right: 10px;
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
-}
+  color: rgba(255, 0, 0, 0.5);}
 
 /*--------------------------------------------------------------
 # Global Sections
@@ -611,7 +610,7 @@ section,
   font-weight: 400;
   padding: 0;
   margin: 0;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: rgba(255, 0, 0, 0.5);  
   display: inline-block;
   text-transform: uppercase;
   font-family: var(--default-font);
@@ -646,7 +645,7 @@ section,
 }
 
 .hero p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: rgba(255, 0, 0, 0.5);  
   margin: 5px 0 30px 0;
   font-size: 20px;
   font-weight: 400;
@@ -692,7 +691,7 @@ section,
 }
 
 .hero .btn-watch-video:hover i {
-  color: color-mix(in srgb, var(--accent-color), transparent 15%);
+  color: rgba(255, 0, 0, 0.5);
 }
 
 .hero .animated {
@@ -753,7 +752,7 @@ section,
 }
 
 .about .fst-italic {
-  color: color-mix(in srgb, var(--default-color), var(--contrast-color) 50%);
+  color: rgba(255, 0, 0, 0.5);
 }
 
 .about .content ul {
@@ -854,7 +853,7 @@ section,
 
 .why-us .icon-box p {
   font-size: 15px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: rgba(255, 0, 0, 0.5);
 }
 
 .why-us .icon-box:hover i {
@@ -910,7 +909,7 @@ section,
   margin: 0;
   font-size: 16px;
   font-weight: 700;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: rgba(255, 0, 0, 0.5);
 }
 
 /*--------------------------------------------------------------
@@ -922,7 +921,7 @@ section,
 
 .menu .nav-link {
   background-color: var(--background-color);
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: rgba(255, 0, 0, 0.5);  
   margin: 0 15px;
   padding: 10px 5px;
   transition: 0.3s;
@@ -976,7 +975,7 @@ section,
 .personajes .tab-content .tab-header p {
   font-size: 14px;
   text-transform: uppercase;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: rgba(255, 0, 0, 0.5);
   margin-bottom: 0;
 }
 
@@ -1004,7 +1003,7 @@ section,
 
 .personajes .tab-content .personajes-item .ingredients {
   font-family: var(--nav-font);
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: rgba(255, 0, 0, 0.5);
   margin-bottom: 5px;
 }
 
@@ -1070,7 +1069,7 @@ section,
 
 .testimonials .testimonial-item h4 {
   font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: rgba(255, 0, 0, 0.5);  
   margin: 0 0 10px 0;
 }
 
@@ -1081,7 +1080,7 @@ section,
 
 .testimonials .testimonial-item .quote-icon-left,
 .testimonials .testimonial-item .quote-icon-right {
-  color: color-mix(in srgb, var(--accent-color), transparent 50%);
+  color: rgba(255, 0, 0, 0.5);
   font-size: 26px;
   line-height: 0;
 }
@@ -1258,7 +1257,7 @@ section,
   font-weight: 700;
   margin: 0 0 5px 0;
   font-family: var(--default-font);
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: rgba(255, 0, 0, 0.5);
 }
 
 .contact .info-item p {
@@ -1273,7 +1272,7 @@ section,
   line-height: 1;
   margin: 4px 6px 0 0;
   transition: 0.3s;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: rgba(255, 0, 0, 0.5);
 }
 
 .contact .info-item .social-links a:hover {
