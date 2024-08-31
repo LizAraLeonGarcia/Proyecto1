@@ -1,22 +1,9 @@
-/**
-* Template Name: Yummy
-* Template URL: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
 /* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Amatic SC",  sans-serif;
   --nav-font: "Inter",  sans-serif;
 }
-
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
@@ -26,24 +13,17 @@
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
-
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #7f7f90;  /* The default color of the main navmenu links */
   --nav-hover-color: #ce1212; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #7f7f90; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #ce1212; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
-
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
-
 .light-background {
   --background-color: #f2f2f2;
   --surface-color: #ffffff;
 }
-
 .dark-background {
   --background-color: #1f1f24;
   --default-color: #ffffff;
@@ -51,12 +31,10 @@
   --surface-color: #37373f;
   --contrast-color: #ffffff;
 }
-
 /* Smooth scroll */
 :root {
   scroll-behavior: smooth;
 }
-
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
@@ -86,9 +64,7 @@ h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
 }
-
-/* Pulsating Play Button
-------------------------------*/
+/* Pulsating Play Button ------------------------------*/
 .pulsating-play-btn {
   width: 94px;
   height: 94px;
@@ -165,9 +141,7 @@ h6 {
     opacity: 0;
   }
 }
-
-/* PHP Email Form Messages
-------------------------------*/
+/* PHP Email Form Messages ------------------------------*/
 .php-email-form .error-message {
   display: none;
   background: #df1529;
@@ -217,10 +191,7 @@ h6 {
     transform: rotate(360deg);
   }
 }
-
-/*--------------------------------------------------------------
-# Global Header
---------------------------------------------------------------*/
+/*-------------------------------------------------------------- Global Header --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -287,9 +258,7 @@ h6 {
 .scrolled .header {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
+/*-------------------------------------------------------------- Navigation Menu -------------------------------------------------------------*/
 /* Desktop Navigation */
 @media (min-width: 1200px) {
   .navmenu {
@@ -364,64 +333,6 @@ h6 {
   .navmenu .active:focus {
     color: color-mix(in srgb, var(--nav-color) 80%, black 50%);
   }
-
-  .navmenu .dropdown ul {
-    margin: 0;
-    padding: 10px 0;
-    background: var(--nav-dropdown-background-color);
-    display: block;
-    position: absolute;
-    visibility: hidden;
-    left: 14px;
-    top: 130%;
-    opacity: 0;
-    transition: 0.3s;
-    border-radius: 4px;
-    z-index: 99;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-  }
-
-  .navmenu .dropdown ul li {
-    min-width: 200px;
-  }
-
-  .navmenu .dropdown ul a {
-    padding: 10px 20px;
-    font-size: 15px;
-    text-transform: none;
-    color: var(--nav-dropdown-color);
-  }
-
-  .navmenu .dropdown ul a i {
-    font-size: 12px;
-  }
-
-  .navmenu .dropdown ul a:hover,
-  .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
-    color: var(--nav-dropdown-hover-color);
-  }
-
-  .navmenu .dropdown:hover>ul {
-    opacity: 1;
-    top: 100%;
-    visibility: visible;
-  }
-
-  .navmenu .dropdown .dropdown ul {
-    top: 0;
-    left: -90%;
-    visibility: hidden;
-  }
-
-  .navmenu .dropdown .dropdown:hover>ul {
-    opacity: 1;
-    top: 0;
-    left: -100%;
-    visibility: visible;
-  }
-}
-
 /* Mobile Navigation */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
@@ -500,25 +411,6 @@ h6 {
     background-color: var(--accent-color);
     color: var(--contrast-color);
     transform: rotate(180deg);
-  }
-
-  .navmenu .dropdown ul {
-    position: static;
-    display: none;
-    z-index: 99;
-    padding: 10px 0;
-    margin: 10px 20px;
-    background-color: var(--nav-dropdown-background-color);
-    transition: all 0.5s ease-in-out;
-  }
-
-  .navmenu .dropdown ul ul {
-    background-color: rgba(33, 37, 41, 0.1);
-  }
-
-  .navmenu .dropdown>.dropdown-active {
-    display: block;
-    background-color: rgba(33, 37, 41, 0.03);
   }
 
   .mobile-nav-active {
@@ -609,9 +501,7 @@ h6 {
   font-size: 13px;
 }
 
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
+/*-------------------------------------------------------------- Preloader --------------------------------------------------------------*/
 #preloader {
   position: fixed;
   inset: 0;
@@ -654,9 +544,7 @@ h6 {
   }
 }
 
-/*--------------------------------------------------------------
-# Scroll Top Button
---------------------------------------------------------------*/
+/*-------------------------------------------------------------- Scroll Top Button --------------------------------------------------------------*/
 .scroll-top {
   position: fixed;
   visibility: hidden;
@@ -791,9 +679,7 @@ section,
   color: var(--accent-color);
 }
 
-/*--------------------------------------------------------------
-# Hero Section (IMAGEN DEL PÓSTER EN HOME)
---------------------------------------------------------------*/
+/*-------------------------------------------------------------- Hero (HOME) --------------------------------------------------------------*/
 .hero {
   width: 100%;
   min-height: 60vh;
@@ -890,10 +776,7 @@ section,
     transform: translateY(-10px);
   }
 }
-
-/*--------------------------------------------------------------
-# About Section
---------------------------------------------------------------*/
+/*-------------------------------------------------------------- About Section --------------------------------------------------------------*/
 .about h3 {
   font-weight: 700;
   font-size: 28px;
@@ -950,7 +833,6 @@ section,
   left: calc(50% - 47px);
   top: calc(50% - 47px);
 }
-
 /*--------------------------------------------------------------
 # Why Us Section
 --------------------------------------------------------------*/
@@ -1084,11 +966,11 @@ section,
 /*--------------------------------------------------------------
 # Menu Section
 --------------------------------------------------------------*/
-.persoanjes .nav-tabs {
+.menu .nav-tabs {
   border: 0;
 }
 
-.personajes .nav-link {
+.menu .nav-link {
   background-color: var(--background-color);
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin: 0 15px;
@@ -1102,18 +984,18 @@ section,
 }
 
 @media (max-width: 575px) {
-  .personajes .nav-link {
+  .menu .nav-link {
     margin: 0 10px;
     padding: 10px 0;
   }
 }
 
-.personajes .nav-link i {
+.menu .nav-link i {
   padding-right: 15px;
   font-size: 48px;
 }
 
-.personajes .nav-link h4 {
+.menu .nav-link h4 {
   font-size: 18px;
   font-weight: 400;
   margin: 0;
@@ -1158,29 +1040,59 @@ section,
   text-align-last: center;
 }
 
-.personajes .tab-content .personajes-item .menu-img {
+.personajes .tab-content .personajes-item .personajes-img {
   padding: 0 60px;
   margin-bottom: 15px;
 }
 
-.persoanjes .tab-content .personajes-item h4 {
+.personajes .tab-content .personajes-item h4 {
   font-size: 24px;
   font-weight: 400;
   margin-bottom: 5px;
   font-family: var(--default-font);
 }
 
-.persoanjes .tab-content .personajes-item .ingredients {
+.personajes .tab-content .personajes-item .ingredients {
   font-family: var(--nav-font);
   color: color-mix(in srgb, var(--default-color), transparent 50%);
   margin-bottom: 5px;
 }
 
-.personajes .tab-content .perosnajes-item .price {
+.personajes .tab-content .personajes-item .price {
   font-size: 24px;
   font-weight: 700;
   color: var(--accent-color);
 }
+
+.personajes .tab-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espacio entre elementos */
+}
+
+.personajes .personajes-item {
+  flex: 1 1 calc(25% - 20px); /* 4 elementos por fila con espacio */
+  box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+  .personajes .personajes-item {
+    flex: 1 1 calc(33.333% - 20px); /* 3 elementos por fila */
+  }
+}
+
+@media (max-width: 768px) {
+  .personajes .personajes-item {
+    flex: 1 1 calc(50% - 20px); /* 2 elementos por fila */
+  }
+}
+
+@media (max-width: 576px) {
+  .personajes .personajes-item {
+    flex: 1 1 100%; /* 1 elemento por fila */
+  }
+}
+
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
@@ -1270,7 +1182,7 @@ section,
 
 /* Asegúrate de que cada columna ocupe el ancho adecuado y sea flexible */
 .col-lg-4 {
-  flex: 1 1 calc(33.333% - 1rem); /* Tres columnas por fila con un espacio entre ellas */
+  flex: 1 1 calc(25% - 1rem); /* Tres columnas por fila con un espacio entre ellas */
   box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho */
   display: flex;
   flex-direction: column; /* Coloca los elementos en una columna */
@@ -1288,12 +1200,27 @@ section,
   max-width: 100%; /* Asegúrate de que la imagen no se salga del contenedor */
   height: auto; /* Mantiene la relación de aspecto de la imagen */
 }
-
-/* Opcional: estilo para el texto debajo de la imagen */
-.member-info {
-  padding: 1rem; /* Espacio alrededor del texto */
+/* Ajusta el contenedor para usar grid */
+.team-members {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Cuatro columnas por fila */
+  gap: 1rem; /* Espacio entre columnas */
 }
 
+/* Ajustes para los elementos */
+.team-member {
+  box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho */
+}
+
+/* Ajustes para las imágenes y el texto */
+.team-member .member-img img {
+  width: 100%; /* Ajusta el tamaño de la imagen */
+  height: auto; /* Mantiene la relación de aspecto */
+}
+
+.team-member .member-info {
+  text-align: center; /* Centra el texto */
+}
 /*--------------------------------------------------------------
 # Book A Table Section
 --------------------------------------------------------------*/
@@ -1320,8 +1247,8 @@ section,
 .book-a-table .php-email-form input[type=text],
 .book-a-table .php-email-form input[type=email],
 .book-a-table .php-email-form input[type=number],
-.book-a-table .php-email-form input[type=date],
-.book-a-table .php-email-form input[type=time],
+.book-a-table .php-email-form input[type=text],
+.book-a-table .php-email-form input[type=text],
 .book-a-table .php-email-form textarea {
   font-size: 14px;
   padding: 10px 15px;
@@ -1335,8 +1262,8 @@ section,
 .book-a-table .php-email-form input[type=text]:focus,
 .book-a-table .php-email-form input[type=email]:focus,
 .book-a-table .php-email-form input[type=number]:focus,
-.book-a-table .php-email-form input[type=date]:focus,
-.book-a-table .php-email-form input[type=time]:focus,
+.book-a-table .php-email-form input[type=text]:focus,
+.book-a-table .php-email-form input[type=text]:focus,
 .book-a-table .php-email-form textarea:focus {
   border-color: var(--accent-color);
 }
@@ -1344,8 +1271,8 @@ section,
 .book-a-table .php-email-form input[type=text]::placeholder,
 .book-a-table .php-email-form input[type=email]::placeholder,
 .book-a-table .php-email-form input[type=number]::placeholder,
-.book-a-table .php-email-form input[type=date]::placeholder,
-.book-a-table .php-email-form input[type=time]::placeholder,
+.book-a-table .php-email-form input[type=text]::placeholder,
+.book-a-table .php-email-form input[type=text]::placeholder,
 .book-a-table .php-email-form textarea::placeholder {
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
@@ -1514,4 +1441,5 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
 }
